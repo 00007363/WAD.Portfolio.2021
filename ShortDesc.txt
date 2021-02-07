@@ -1,0 +1,1 @@
+This is just a text .txt file that has been created in the process of learning basics of github :)
