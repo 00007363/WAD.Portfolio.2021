@@ -1,0 +1,73 @@
+﻿@model IEnumerable<FootballApp.Models.Player>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Players</h1>
+
+<p>
+    <a type="button" class="btn btn-success" asp-action="Create">New Player</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+              <label @Html.DisplayNameFor(model => model.FirstName)>First Name</label>
+            </th>
+            <th>
+              <label @Html.DisplayNameFor(model => model.LastName)>Last Name</label>
+            </th>
+            <th>
+              <label @Html.DisplayNameFor(model => model.Age)>Age</label>
+            </th>
+            <th>
+               <label @Html.DisplayNameFor(model => model.Origin)>Origin</label>
+            </th>
+            <th>
+               <label @Html.DisplayNameFor(model => model.Position)>Position</label>
+            </th>
+            <th>
+               <label @Html.DisplayNameFor(model => model.KitNumber)>Kit Number</label>
+            </th>
+            <th>
+               <label @Html.DisplayNameFor(model => model.Club)>Club</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KitNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Club.Name)
+            </td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a type="button" class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a type="button" class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a type="button" class="btn btn-info" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

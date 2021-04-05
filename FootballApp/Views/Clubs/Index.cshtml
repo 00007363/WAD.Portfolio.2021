@@ -1,0 +1,55 @@
+﻿@model IEnumerable<FootballApp.Models.Club>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Clubs</h1>
+
+<p>
+    <a type="button" class="btn btn-success" asp-action="Create">New Club</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               <label @Html.DisplayNameFor(model => model.Name)>Name</label>
+            </th>
+            <th>
+               <label @Html.DisplayNameFor(model => model.HomeCountry)>Home Country</label>
+            </th>
+            <th>
+               <label @Html.DisplayNameFor(model => model.Stadium)>Stadium</label>
+            </th>
+            <th>
+               <label @Html.DisplayNameFor(model => model.FoundedYear)>Founded Year</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stadium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FoundedYear)
+            </td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a type="button" class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a type="button" class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a type="button" class="btn btn-info" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
