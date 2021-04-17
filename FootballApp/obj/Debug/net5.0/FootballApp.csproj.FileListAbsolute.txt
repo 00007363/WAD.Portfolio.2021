@@ -154,3 +154,7 @@ C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\De
 C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Players\Details.cshtml.g.cs
 C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Players\Edit.cshtml.g.cs
 C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Players\Index.cshtml.g.cs
+C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs
+C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Home\Delete.cshtml.g.cs
+C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
+C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs

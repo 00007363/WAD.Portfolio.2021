@@ -1,4 +1,5 @@
 ﻿using FootballApp.Models;
+using FootballApp.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,16 +12,64 @@ namespace FootballApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ICouch _couch;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ICouch couch)
         {
-            _logger = logger;
+            _couch = couch;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
+            var couches = _couch.GetAll();
+            return View(couches);
+        }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            
             return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Couch couch)
+        {
+            _couch.Create(couch);
+            _couch.Save();
+
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpGet]
+        public IActionResult Delete(int Id)
+        {
+            var couch = _couch.GetById(Id);
+            return View(couch);
+        }
+        [HttpPost]
+        public IActionResult Delete(Couch couch)
+        {
+            _couch.Remove(couch);
+            _couch.Save();
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpGet]
+        public IActionResult Details(int Id)
+        {
+            var couch = _couch.GetById(Id);
+            return View(couch);
+        }
+        [HttpGet]
+        public IActionResult Edit(int Id)
+        {
+            var couch = _couch.GetById(Id);
+            return View(couch);
+        }
+        [HttpPost]
+        public IActionResult Edit(Couch couch)
+        {
+            _couch.Edit(couch);
+            _couch.Save();
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Privacy()

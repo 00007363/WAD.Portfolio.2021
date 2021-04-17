@@ -16,5 +16,6 @@ namespace FootballApp
 
         public virtual DbSet<Club> Club { get; set; }
         public virtual DbSet<Player> Player { get; set; }
+        public DbSet<Couch> Couches { get; set; }
     }
 }

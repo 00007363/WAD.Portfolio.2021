@@ -1,8 +1,53 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<FootballApp.Models.Couch>
+
+@{
+    ViewData["Title"] = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to the Demo</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Couches</h1>
+
+<p>
+    <a asp-action="Create">Add new couch</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label @Html.DisplayNameFor(model => model.Name)>Name</label>
+            </th>
+            <th>
+                <label @Html.DisplayNameFor(model => model.DateOfBirth)>Date of Birth</label>
+            </th>
+            <th>
+                <label @Html.DisplayNameFor(model => model.Nationality)>Nationality</label>
+            </th>
+            <th>
+                <label @Html.DisplayNameFor(model => model.CurrentClub)>Current Club</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nationality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentClub)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
