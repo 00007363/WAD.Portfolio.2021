@@ -23,7 +23,22 @@ namespace FootballApp.Controllers
         // GET: Clubs
         public async Task<IActionResult> Index()
         {
+
             return View(await _context.Club.ToListAsync());
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Index(string Clubsearch)
+        {
+            ViewData["Getclubdetails"] = Clubsearch;
+
+            var clubquery = from x in _context.Club select x;
+
+            if (!String.IsNullOrEmpty(Clubsearch))
+            {
+                clubquery = clubquery.Where(x => x.Name.Contains(Clubsearch) || x.Stadium.Contains(Clubsearch));
+            }
+            return View(await clubquery.AsNoTracking().ToListAsync());
         }
 
         // GET: Clubs/Details/5

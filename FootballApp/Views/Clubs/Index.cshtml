@@ -9,6 +9,15 @@
 <p>
     <a type="button" class="btn btn-success" asp-action="Create">New Club</a>
 </p>
+
+<form method="get" asp-action="Index">
+    <p>
+        <input type="search" placeholder="Enter Club name or Stadium name..." value="@ViewData["Getclubdetails"]" name="Clubsearch" class="form-control my-3" />
+        <input type="submit" value="Search" class="btn btn-primary" /> |
+        <a type="button" class="btn btn-light" asp-action="Index">Get all Clubs</a>
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
