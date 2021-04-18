@@ -14,6 +14,7 @@ namespace FootballApp.Controllers
     {
         private readonly FootballContext _context;
 
+
         public ClubsController(FootballContext context)
         {
             _context = context;

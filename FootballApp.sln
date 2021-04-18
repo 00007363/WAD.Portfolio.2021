@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballApp", "FootballApp\FootballApp.csproj", "{2A569BB1-4627-4D4D-867E-02F0FD4BE54D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballApp", "FootballApp\FootballApp.csproj", "{2A569BB1-4627-4D4D-867E-02F0FD4BE54D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{BFD34B72-1781-4A24-822C-3B535AF37B39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2A569BB1-4627-4D4D-867E-02F0FD4BE54D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A569BB1-4627-4D4D-867E-02F0FD4BE54D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A569BB1-4627-4D4D-867E-02F0FD4BE54D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD34B72-1781-4A24-822C-3B535AF37B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD34B72-1781-4A24-822C-3B535AF37B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD34B72-1781-4A24-822C-3B535AF37B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD34B72-1781-4A24-822C-3B535AF37B39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

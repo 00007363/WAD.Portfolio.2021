@@ -158,3 +158,5 @@ C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\De
 C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Home\Delete.cshtml.g.cs
 C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
+C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\bin\Debug\net5.0\DAL.dll
+C:\Users\User\Desktop\University Level5\WAD\Final\FootballApp\FootballApp\bin\Debug\net5.0\DAL.pdb
